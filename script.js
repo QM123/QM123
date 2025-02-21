@@ -76,3 +76,21 @@ yesButton.addEventListener("click", function () {
   // 禁止滚动，保持页面美观
   document.body.style.overflow = "hidden";
 });
+
+// 等待页面加载完成
+document.addEventListener('DOMContentLoaded', function() {
+    // 获取音频元素
+    var audio = document.getElementById('backgroundMusic');
+
+    // 监听页面的点击事件
+    document.body.addEventListener('click', function() {
+        // 播放音频
+        audio.play();
+    });
+
+    // 监听页面的触摸事件（针对移动设备）
+    document.body.addEventListener('touchstart', function() {
+        // 播放音频
+        audio.play();
+    });
+});
